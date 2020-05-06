@@ -1,0 +1,14 @@
+Tag:
+  domain: task
+  type: "object"
+  description: "Tag"
+  summary: "Tag"
+  properties:
+    id:
+      type: "integer"
+      format: "int64"
+      description: "id"
+    name:
+      type: "string"
+      description: "name"
+      required: "true"

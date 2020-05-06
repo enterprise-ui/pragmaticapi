@@ -1,0 +1,14 @@
+User:
+  domain: user
+  type: "object"
+  description: "User"
+  summary: "User"
+  properties:
+    id:
+      type: "integer"
+      format: "int64"
+      description: "id"
+    username:
+      type: "string"
+      description: "username"
+      required: "true"

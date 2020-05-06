@@ -1,0 +1,32 @@
+Task:
+  domain: task
+  type: "object"
+  description: "Task"
+  summary: "Task"
+  properties:
+    id:
+      type: "integer"
+      format: "int64"
+      description: "id"
+    asignee:
+      $ref: "user.User"
+      required: "true"
+      description: "asignee"
+    description:
+      type: "string"
+      example: "task"
+      description: "description"
+      required: "true"
+    tags:
+      type: "array"
+      description: "tags"
+      items:
+        $ref: "task.Tag"
+    status:
+      type: "string"
+      description: "task status"
+      required: "true"
+      enum:
+      - "TODO"
+      - "IN_PROGRESS"
+      - "DONE"
