@@ -23,10 +23,47 @@ Task:
       items:
         $ref: "task.Tag"
     status:
+      $ref: "task.TaskStatus"
+      required: "true"
+      description: "status"
+      state: "true"
+# Filter
+  method:
+    getall:
+      filter:
+        $ref: "task.TaskFilter"
+        required: "true"
+        description: "Filter"
+TaskStatus:
+  domain: task
+  type: "object"
+  description: "TaskStatus"
+  summary: "TaskStatus"
+  properties:
+    id:
+      type: "integer"
+      format: "int64"
+      description: "id"
+    name:
       type: "string"
-      description: "task status"
+      description: "task status name"
       required: "true"
       enum:
       - "TODO"
       - "IN_PROGRESS"
       - "DONE"
+TaskFilter:
+  domain: task
+  type: "object"
+  description: "TaskFilter"
+  summary: "TaskFilter"
+  properties:
+    ids:
+      type: "array"
+      description: "ids"
+      items:
+        $ref: "generic.ID"
+    text:
+      type: "string"
+      example: "task"
+      description: "task text"

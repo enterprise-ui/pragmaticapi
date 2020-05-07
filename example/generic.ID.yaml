@@ -1,0 +1,5 @@
+ID:
+  domain: generic
+  type: "string"
+  description: "ID"
+  summary: "ID"
