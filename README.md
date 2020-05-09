@@ -1,2 +1,8 @@
 # pragmaticapi
-Pragmatic API 
+Pragmatic API
+
+
+```
+$ yarn
+$ yarn cli
+```

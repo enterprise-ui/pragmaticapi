@@ -1,0 +1,16 @@
+{
+    "name": "cra-ts-styled-boilerplate",
+    "private": true,
+    "workspaces": {
+        "packages": [
+          "packages/*"
+        ]
+    },
+    "scripts": {
+      "cli": "ts-node packages/cli/src/index.ts"
+    },
+    "devDependencies": {
+      "cross-env": "7.0.2",
+      "ts-node": "8.10.1"
+    }
+  }
