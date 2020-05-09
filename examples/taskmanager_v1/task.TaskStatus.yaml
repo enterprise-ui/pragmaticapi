@@ -1,0 +1,28 @@
+---
+"$id": "task.TaskStatus"
+type: object
+required:
+- id
+- name
+additionalProperties: true
+properties:
+  id:
+    "$id": "#/properties/id"
+    type: string
+    title: The task status id
+    description: An explanation about the purpose of this instance.
+    default: ''
+    examples:
+    - T-123
+  name:
+    "$id": "#/properties/name"
+    type: string
+    title: status name
+    default: ''
+    examples:
+    - 'TODO'
+    description: status name
+    enum:
+    - TODO
+    - IN_PROGRESS
+    - DONE
