@@ -9,6 +9,8 @@ required:
 - tags
 - status
 additionalProperties: true
+# q - searchstring
+fulltextsearch: true
 properties:
   id:
     "$id": "#/properties/id"
@@ -18,6 +20,8 @@ properties:
     default: ''
     examples:
     - T-123
+    filter: base
+    sorting: true
   assignee:
     "$id": "#/properties/assignee"
     type: string
@@ -26,6 +30,8 @@ properties:
     default: ''
     examples:
     - '123'
+    filter: base
+    sorting: true
   summary:
     "$id": "#/properties/summary"
     type: string
@@ -34,6 +40,8 @@ properties:
     default: ''
     examples:
     - Task summary
+    filter: base
+    sorting: true
   content:
     "$id": "#/properties/content"
     type: string
@@ -42,6 +50,8 @@ properties:
     default: ''
     examples:
     - Task content
+    filter: base
+    sorting: true
   tags:
     "$id": "#/properties/tags"
     type: array
@@ -56,6 +66,7 @@ properties:
       enum:
       - b2b
       - b2c
+    filter: base
   status:
     "$id": "#/properties/status"
     type: string
@@ -63,6 +74,7 @@ properties:
     description: status
     # "$ref": "task.TaskStatus"
     "$link": "task.TaskStatus"
+    filter: base
     enum:
     - TODO
     - IN_PROGRESS
