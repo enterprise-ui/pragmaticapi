@@ -18,10 +18,11 @@ properties:
     "$id": "#/properties/task_id"
     type: string
     title: The task id
-    description: An explanation about the purpose of this instance.
+    description: Task id
     default: ''
     examples:
     - 'T-123'
+    "$ref": "task.Task#/properties/id"
   datetime:
     "$id": "#/properties/datetime"
     type: string
