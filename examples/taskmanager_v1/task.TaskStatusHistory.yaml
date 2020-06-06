@@ -1,0 +1,59 @@
+---
+"$id": "task.TaskStatusHistory"
+type: object
+required:
+- id
+- name
+additionalProperties: true
+properties:
+  id:
+    "$id": "#/properties/id"
+    type: string
+    title: The task status history id
+    description: An explanation about the purpose of this instance.
+    default: ''
+    examples:
+    - TST-123
+  task_id:
+    "$id": "#/properties/task_id"
+    type: string
+    title: The task id
+    description: An explanation about the purpose of this instance.
+    default: ''
+    examples:
+    - 'T-123'
+  datetime:
+    "$id": "#/properties/datetime"
+    type: string
+    title: The task status history date
+    description: An explanation about the purpose of this instance.
+    default: ''
+    examples:
+    - '2020-01-05T14:48:00.000Z'
+  prev_status:
+    "$id": "#/properties/prev_status"
+    type: string
+    title: previous status name
+    default: ''
+    examples:
+    - 'TODO'
+    description: previous status name
+    "$ref": "task.TaskStatus#/properties/id"
+  status:
+    "$id": "#/properties/status"
+    type: string
+    title: status name
+    default: ''
+    examples:
+    - 'TODO'
+    description: status name
+    "$ref": "task.TaskStatus#/properties/id"
+  user:
+    "$id": "#/properties/user"
+    type: string
+    title: Username
+    default: ''
+    examples:
+    - 'Username'
+    description: Username
+    "$ref": "user.User#/properties/id"

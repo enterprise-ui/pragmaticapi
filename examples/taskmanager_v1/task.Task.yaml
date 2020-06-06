@@ -25,17 +25,18 @@ properties:
   assignee:
     "$id": "#/properties/assignee"
     type: string
-    title: The assignee schema
-    description: An explanation about the purpose of this instance.
+    title: Assignee
+    description: Assignee
     default: ''
     examples:
-    - '123'
+    - 'username'
     filter: base
     sorting: true
+    "$ref": "user.User#/properties/id"
   summary:
     "$id": "#/properties/summary"
     type: string
-    title: The summary schema
+    title: Summary
     description: An explanation about the purpose of this instance.
     default: ''
     examples:
@@ -67,13 +68,19 @@ properties:
       - b2b
       - b2c
     filter: base
+  actions:
+    "$id": "#/properties/actions"
+    type: string
+    title: status
+    description: status
+    "$ref": "task.TaskActions#/properties/id"
+    filter: base
   status:
     "$id": "#/properties/status"
     type: string
     title: status
     description: status
-    # "$ref": "task.TaskStatus"
-    "$link": "task.TaskStatus"
+    "$ref": "task.TaskStatus#/properties/id"
     filter: base
     enum:
     - TODO

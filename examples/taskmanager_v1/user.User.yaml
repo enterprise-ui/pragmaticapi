@@ -1,0 +1,41 @@
+---
+"$id": "user.User"
+type: object
+required:
+- id
+- username
+- name
+additionalProperties: true
+# q - searchstring
+fulltextsearch: true
+properties:
+  id:
+    "$id": "#/properties/id"
+    type: string
+    title: The id schema
+    description: An explanation about the purpose of this instance.
+    default: ''
+    examples:
+    - U-123
+    filter: base
+    sorting: true
+  username:
+    "$id": "#/properties/username"
+    type: string
+    title: Username
+    description: Username
+    default: ''
+    examples:
+    - 'username'
+    filter: base
+    sorting: true
+  name:
+    "$id": "#/properties/name"
+    type: string
+    title: Name
+    description: Name
+    default: ''
+    examples:
+    - Name
+    filter: base
+    sorting: true

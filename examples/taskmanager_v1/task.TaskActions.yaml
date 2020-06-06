@@ -1,5 +1,5 @@
 ---
-"$id": "task.TaskStatus"
+"$id": "task.TaskActions"
 type: object
 required:
 - id
@@ -9,21 +9,27 @@ properties:
   id:
     "$id": "#/properties/id"
     type: string
-    title: The task status id
+    title: The task action id
     description: An explanation about the purpose of this instance.
     default: ''
     examples:
-    - 'TODO'
+    - 'TASK.GET'
     enum:
-    - TODO
-    - IN_PROGRESS
-    - DONE
-    - CANCELED
+    - TASK.GET
+    - TASK.GET_LIST
+    - TASK.ADD
+    - TASK.ADD_LIST
+    - TASK.UPDATE
+    - TASK.UPDATE_LIST
+    - TASK.CANCEL
+    - TASK.CANCEL_LIST
+    - TASK.DELETE
+    - TASK.DELETE_LIST
   name:
     "$id": "#/properties/name"
     type: string
     title: status name
     default: ''
     examples:
-    - 'TODO'
+    - 'TASK.GET'
     description: status name
