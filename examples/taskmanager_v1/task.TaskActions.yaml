@@ -15,16 +15,16 @@ properties:
     examples:
     - 'TASK.GET'
     enum:
-    - TASK.GET
-    - TASK.GET_LIST
-    - TASK.ADD
-    - TASK.ADD_LIST
-    - TASK.UPDATE
-    - TASK.UPDATE_LIST
-    - TASK.CANCEL
-    - TASK.CANCEL_LIST
-    - TASK.DELETE
-    - TASK.DELETE_LIST
+    - TASKS.GET
+    - TASKS.GET_LIST
+    - TASKS.ADD
+    - TASKS.ADD_LIST
+    - TASKS.UPDATE
+    - TASKS.UPDATE_LIST
+    - TASKS.CANCEL
+    - TASKS.CANCEL_LIST
+    - TASKS.DELETE
+    - TASKS.DELETE_LIST
   name:
     "$id": "#/properties/name"
     type: string

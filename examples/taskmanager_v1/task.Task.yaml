@@ -94,10 +94,12 @@ properties:
     filter: base
   actions:
     "$id": "#/properties/actions"
-    type: string
-    title: status
-    description: status
-    "$ref": "task.TaskActions#/properties/id"
+    type: array
+    title: actions
+    description: actions
+    items:
+      type: string
+      "$ref": "task.TaskActions#/properties/id"
     filter: base
   status:
     "$id": "#/properties/status"
@@ -106,7 +108,3 @@ properties:
     description: status
     "$ref": "task.TaskStatus#/properties/id"
     filter: base
-    enum:
-    - TODO
-    - IN_PROGRESS
-    - DONE
