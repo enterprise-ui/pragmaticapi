@@ -31,7 +31,7 @@
     "tar-pack": "3.4.1",
     "tmp": "0.1.0",
     "ts-node": "8.10.1",
-    "typescript": "^3.8.3",
+    "typescript": "3.9.5",
     "validate-npm-package-name": "3.0.0"
   },
   "main_src": "src/index.ts"
