@@ -5,14 +5,14 @@ required:
 - id
 - name
 additionalProperties: true
+excludeFromRestPath: true
 properties:
   id:
     "$id": "#/properties/id"
     type: string
     title: The task action id
     description: An explanation about the purpose of this instance.
-    default: ''
-    examples:
+    example:
     - 'TASK.GET'
     enum:
     - TASKS.GET
@@ -29,7 +29,6 @@ properties:
     "$id": "#/properties/name"
     type: string
     title: status name
-    default: ''
-    examples:
+    example:
     - 'TASK.GET'
     description: status name
