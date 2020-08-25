@@ -99,6 +99,7 @@ properties:
     description: actions
     items:
       "$ref": "task.TaskActions"
+      "$lookup": "task.TaskActions#/properties/id"
     filter: base
   status:
     "$id": "#/properties/status"
