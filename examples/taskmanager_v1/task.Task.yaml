@@ -1,6 +1,8 @@
 ---
 "$id": "task.Task"
 type: object
+title: Task model
+description: Simple task operation model
 required:
 - id
 - assignee
@@ -17,24 +19,23 @@ filter:
     type: string
     title: Status history date from
     description: Status history date from
-    examples:
+    example:
     - '2020-01-05T14:48:00.000Z'
   statusHistoryDateTo:
     "$id": "#/filter/statusHistoryDateTo"
     type: string
     title: Status history date to
     description: Status history date to
-    examples:
+    example:
     - '2020-01-05T14:48:00.000Z'
   statusHistoryStatus:
     "$id": "#/filter/statusHistoryStatus"
     type: string
     title: status name
     default: ''
-    examples:
+    example:
     - 'TODO'
     description: status name
-    "$ref": "task.TaskStatus#/properties/id"
 properties:
   id:
     "$id": "#/properties/id"
@@ -42,7 +43,7 @@ properties:
     title: The id schema
     description: An explanation about the purpose of this instance.
     default: ''
-    examples:
+    example:
     - T-123
     filter: base
     sorting: true
@@ -52,18 +53,17 @@ properties:
     title: Assignee
     description: Assignee
     default: ''
-    examples:
+    example:
     - 'username'
     filter: base
     sorting: true
-    "$ref": "user.User#/properties/id"
   summary:
     "$id": "#/properties/summary"
     type: string
     title: Summary
     description: An explanation about the purpose of this instance.
     default: ''
-    examples:
+    example:
     - Task summary
     filter: base
     sorting: true
@@ -73,7 +73,7 @@ properties:
     title: The content schema
     description: An explanation about the purpose of this instance.
     default: ''
-    examples:
+    example:
     - Task content
     filter: base
     sorting: true
@@ -83,7 +83,7 @@ properties:
     title: The tags schema
     description: An explanation about the purpose of this instance.
     default: []
-    examples:
+    example:
     - - b2b
       - b2c
     items:
@@ -98,13 +98,12 @@ properties:
     title: actions
     description: actions
     items:
-      type: string
-      "$ref": "task.TaskActions#/properties/id"
+      "$ref": "task.TaskActions"
+      "$lookup": "task.TaskActions#/properties/id"
     filter: base
   status:
     "$id": "#/properties/status"
     type: string
     title: status
     description: status
-    "$ref": "task.TaskStatus#/properties/id"
     filter: base

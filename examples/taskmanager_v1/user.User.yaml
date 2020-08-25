@@ -15,7 +15,7 @@ properties:
     title: The id schema
     description: An explanation about the purpose of this instance.
     default: ''
-    examples:
+    example:
     - U-123
     filter: base
     sorting: true
@@ -25,7 +25,7 @@ properties:
     title: Username
     description: Username
     default: ''
-    examples:
+    example:
     - 'username'
     filter: base
     sorting: true
@@ -35,7 +35,7 @@ properties:
     title: Name
     description: Name
     default: ''
-    examples:
+    example:
     - Name
     filter: base
     sorting: true

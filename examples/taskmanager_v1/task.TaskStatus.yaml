@@ -5,6 +5,7 @@ required:
 - id
 - name
 additionalProperties: true
+excludeFromRestPath: true
 properties:
   id:
     "$id": "#/properties/id"
@@ -12,7 +13,7 @@ properties:
     title: The task status id
     description: An explanation about the purpose of this instance.
     default: ''
-    examples:
+    example:
     - 'TODO'
     enum:
     - TODO
@@ -24,6 +25,6 @@ properties:
     type: string
     title: status name
     default: ''
-    examples:
+    example:
     - 'TODO'
     description: status name
