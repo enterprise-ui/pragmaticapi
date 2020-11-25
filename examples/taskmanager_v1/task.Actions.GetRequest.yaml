@@ -1,0 +1,12 @@
+"$id": "task.Actions.GetRequest"
+type: object
+required:
+- id
+additionalProperties: true
+excludeFromRestPath: true
+properties:
+  id:
+    "$id": "#/properties/id"
+    type: string
+    title: The task action id
+    description: An explanation about the purpose of this instance.

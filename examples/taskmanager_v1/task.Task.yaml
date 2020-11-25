@@ -97,10 +97,45 @@ properties:
     type: array
     title: actions
     description: actions
-    items:
-      "$ref": "task.TaskActions"
-      "$lookup": "task.TaskActions#/properties/id"
     filter: base
+    # "#wrappedWith": paginationModel
+    api:
+      get: # -> TASK_ACTIONS_GET
+        rest_type: get
+        request: 
+          "$ref": "task.Actions.GetRequest" # -> {..., items: [model], pagination: {}}
+          # "#wrappedWith": standardPaginationModel
+        response:
+          "$ref": "task.Actions.GetResponse" # -> {..., items: [model], pagination: {}}
+          # "#wrappedWith": standardPaginationModel
+      add: # -> TASK_ACTIONS_ADD
+        rest_type: post
+        request:
+          "$ref": "task.Actions.AddRequest" # -> {..., items: [model], ...}}
+          # "#wrappedWith": standardRequestModel
+        response:
+          "$ref": "common.standardOkResponse" # -> {status: 'ok', error: ''}
+      update: # -> TASK_ACTIONS_UPDATE
+        rest_type: patch
+        request:
+          "$ref": "task.Actions.UpdateRequest" # -> {..., items: [model], ...}
+          # "#wrappedWith": standardRequestModel
+        response:
+          "$ref": "common.standardOkResponse" # -> {status: 'ok', error: ''}
+      cancel: # -> TASK_ACTIONS_CANCEL
+        rest_type: post
+        request:
+          "$ref": "task.Actions.CancelRequest" # -> {..., items: [model], pagination: {}}
+          # "#wrappedWith": standardRequestModel
+        response:
+          "$ref": "common.standardOkResponse" # -> {status: 'ok', error: ''}
+      delete: # -> TASK_ACTIONS_DELETE
+        rest_type: delete
+        request:
+          "$ref": "task.Actions.DeleteRequest" # -> {..., items: [model], pagination: {}}
+          # "#wrappedWith": standardRequestModel
+        response:
+          "$ref": "common.standardOkResponse" # -> {status: 'ok', error: ''}
   status:
     "$id": "#/properties/status"
     type: string
