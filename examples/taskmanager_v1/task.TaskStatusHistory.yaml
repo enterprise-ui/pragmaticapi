@@ -15,6 +15,7 @@ properties:
     default: ''
     example:
     - TST-123
+    isPrimaryKey: true
   task_id:
     "$id": "#/properties/task_id"
     type: string

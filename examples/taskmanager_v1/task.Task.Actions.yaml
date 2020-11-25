@@ -25,6 +25,7 @@ properties:
     - TASKS.CANCEL_LIST
     - TASKS.DELETE
     - TASKS.DELETE_LIST
+    isPrimaryKey: true
   name:
     "$id": "#/properties/name"
     type: string

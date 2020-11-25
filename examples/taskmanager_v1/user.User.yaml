@@ -19,6 +19,7 @@ properties:
     - U-123
     filter: base
     sorting: true
+    isPrimaryKey: true
   username:
     "$id": "#/properties/username"
     type: string

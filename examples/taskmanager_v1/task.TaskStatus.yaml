@@ -20,6 +20,7 @@ properties:
     - IN_PROGRESS
     - DONE
     - CANCELED
+    isPrimaryKey: true
   name:
     "$id": "#/properties/name"
     type: string

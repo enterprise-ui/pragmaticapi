@@ -47,6 +47,7 @@ properties:
     - T-123
     filter: base
     sorting: true
+    isPrimaryKey: true
   assignee:
     "$id": "#/properties/assignee"
     type: string
@@ -98,8 +99,8 @@ properties:
     title: actions
     description: actions
     items:
-      "$ref": "task.TaskActions"
-      "$lookup": "task.TaskActions#/properties/id"
+      "$ref": "task.Task.Actions"
+      "$lookup": "task.Task.Actions#/properties/id"
     filter: base
   status:
     "$id": "#/properties/status"
