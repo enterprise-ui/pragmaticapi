@@ -1,0 +1,12 @@
+---
+"$id": "user.UserFilter.API"
+type: object
+required:
+- id
+- username
+- name
+properties:
+  "$useField":
+    - "user.User/properties/id"
+    - "user.User/properties/username"
+    - "user.User/properties/name"

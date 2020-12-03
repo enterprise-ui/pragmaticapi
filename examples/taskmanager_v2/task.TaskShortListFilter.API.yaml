@@ -1,0 +1,16 @@
+---
+"$id": "task.TaskShortListFilter"
+type: object
+title: Task short list filter
+description: Task short list filter
+required:
+- id
+- assignee
+- summary
+- status
+properties:
+  "$useField":
+    - "task.Task/properties/id"
+    - "task.Task/properties/assignee"
+    - "task.Task/properties/summary"
+    - "task.Task/properties/status"

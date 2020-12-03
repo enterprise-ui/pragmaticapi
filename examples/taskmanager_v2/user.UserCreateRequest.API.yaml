@@ -1,0 +1,10 @@
+---
+"$id": "user.UserCreateRequest.API"
+type: object
+required:
+- username
+- name
+properties:
+  "$useField":
+    - "user.User/properties/username"
+    - "user.User/properties/name"

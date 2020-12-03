@@ -1,0 +1,43 @@
+---
+"$id": "task.TaskFilter.API"
+type: object
+title: Task filter model
+description: Simple task filter model
+required:
+- id
+- assignee
+- summary
+- content
+- tags
+- status
+fulltextsearch: true
+properties:
+  "$useField":
+    - "task.Task/properties/id"
+    - "task.Task/properties/assignee"
+    - "task.Task/properties/summary"
+    - "task.Task/properties/content"
+    - "task.Task/properties/tags"
+    - "task.Task/properties/status"
+  statusHistoryDateFrom:
+    "$id": "#/properties/statusHistoryDateFrom"
+    type: string
+    title: Status history date from
+    description: Status history date from
+    example:
+    - '2020-01-05T14:48:00.000Z'
+  statusHistoryDateTo:
+    "$id": "#/properties/statusHistoryDateTo"
+    type: string
+    title: Status history date to
+    description: Status history date to
+    example:
+    - '2020-01-05T14:48:00.000Z'
+  statusHistoryStatus:
+    "$id": "#/properties/statusHistoryStatus"
+    type: string
+    title: status name
+    default: ''
+    example:
+    - 'TODO'
+    description: status name

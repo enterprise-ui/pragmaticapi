@@ -1,0 +1,11 @@
+{
+    "id": "T-123",
+    "assignee": "123",
+    "summary": "Task summary",
+    "content": "Task content",
+    "tags": [
+        "b2b",
+        "b2c"
+    ],
+    "status": "TODO"
+}

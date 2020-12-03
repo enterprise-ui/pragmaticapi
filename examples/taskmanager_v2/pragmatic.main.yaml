@@ -1,0 +1,8 @@
+description: "This is a sample OpenApi3 server for PragmaticApi specification."
+version: "1.0.0"
+title: "Swagger PragmaticApi OpenApi3 specification"
+termsOfService: "http://example.com"
+contact:
+  name: "PragmaticApi support"
+  url: "http://www.example.com/support"
+  email: "support@example.com"
