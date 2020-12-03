@@ -1,0 +1,77 @@
+---
+"$id": "task.Task"
+type: object
+title: Task model
+description: Simple task operation model
+required:
+- id
+- assignee
+- summary
+- content
+- tags
+- status
+additionalProperties: true
+# q - searchstring
+fulltextsearch: true
+properties:
+  id:
+    "$id": "#/properties/id"
+    type: string
+    title: The id schema
+    description: An explanation about the purpose of this instance.
+    default: ''
+    example:
+    - T-123
+    filter: base
+    sorting: true
+  assignee:
+    "$id": "#/properties/assignee"
+    type: string
+    title: Assignee
+    description: Assignee
+    default: ''
+    example:
+    - 'username'
+    filter: base
+    sorting: true
+  summary:
+    "$id": "#/properties/summary"
+    type: string
+    title: Summary
+    description: An explanation about the purpose of this instance.
+    default: ''
+    example:
+    - Task summary
+    filter: base
+    sorting: true
+  content:
+    "$id": "#/properties/content"
+    type: string
+    title: The content schema
+    description: An explanation about the purpose of this instance.
+    default: ''
+    example:
+    - Task content
+    filter: base
+    sorting: true
+  tags:
+    "$id": "#/properties/tags"
+    type: array
+    title: The tags schema
+    description: An explanation about the purpose of this instance.
+    default: []
+    example:
+    - - b2b
+      - b2c
+    items:
+      type: string
+      enum:
+      - b2b
+      - b2c
+    filter: base
+  status:
+    "$id": "#/properties/status"
+    type: string
+    title: status
+    description: status
+    filter: base

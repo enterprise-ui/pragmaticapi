@@ -1,0 +1,22 @@
+---
+"$id": "user.User"
+type: object
+required:
+- status
+properties:
+  status:
+    "$id": "#/properties/status"
+    type: string
+    title: Status
+    description: Response status.
+    default: ''
+    example:
+    - success
+  message:
+    "$id": "#/properties/message"
+    type: string
+    title: Message
+    description: Response message.
+    default: ''
+    example:
+    - ok

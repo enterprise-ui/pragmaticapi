@@ -1,0 +1,36 @@
+api: 
+  title: Task actions title
+  description: Task actions description
+  # секция с действиями
+  actions:
+    crud:
+      methods: cr
+      filter: 
+        "$ref": "task.TaskFilter.API"
+      createRequest:
+        "$ref": "task.TaskCreateRequest.API"
+      model:
+        "$ref": "task.Task"
+      # delete - зашить
+    getShortList:
+      request: 
+        filter:
+          "$ref": "task.TaskShortListFilter.API"
+      response:
+        type: array
+        model:
+          "$ref": "task.TaskShortModel.API"
+      rest: 
+        type: get
+    # сортировка в реквесте из коробки
+    changeStatus:
+      request: 
+        model:
+          "$ref": "task.ChangeStatusRequest.API"
+          # ids:[], delta: {status: "NEW"}
+      response:
+        type: array
+        model:
+          "$ref": "task.ChangeStatusResponse.API"
+      rest: 
+        type: post

@@ -1,0 +1,28 @@
+---
+"$id": "task.ChangeStatusRequest.API"
+type: object
+title: Task change status request model
+description: Task change status request model
+required:
+- id
+- assignee
+- summary
+- content
+- tags
+- status
+properties:
+  ids:
+    "$id": "#/properties/ids"
+    type: string
+    title: The id schema
+    description: An explanation about the purpose of this instance.
+    default: ''
+    example:
+    - T-123
+    filter: base
+    sorting: true
+  delta:
+    "$id": "#/properties/delta"
+    type: array
+    items:
+      "$ref": "task.Task"

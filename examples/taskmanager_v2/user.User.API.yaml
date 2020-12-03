@@ -1,0 +1,24 @@
+api: 
+  title: User actions title
+  description: User actions description
+  # секция с действиями
+  actions:
+    crud:
+      methods: crud
+      filter: 
+        "$ref": "user.UserFilter.API"
+      createRequest:
+        "$ref": "user.UserCreateRequest.API"
+      model:
+        "$ref": "user.User"
+      # delete - зашить
+    blockUser:
+      request:
+        type: array
+        model: 
+          "$ref": "user.BlockUserRequest.API"
+      response:
+        model:
+          "$ref": "common.BlockUserResponse.API"
+      rest:
+        type: post
