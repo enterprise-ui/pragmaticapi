@@ -6,31 +6,31 @@ api:
     crud:
       methods: cr
       filter: 
-        "$ref": "task.TaskFilter.API"
+        "$ref": "task.TaskFilter"
       createRequest:
-        "$ref": "task.TaskCreateRequest.API"
+        "$ref": "task.TaskCreateRequest"
       model:
         "$ref": "task.Task"
       # delete - зашить
     getShortList:
       request: 
         filter:
-          "$ref": "task.TaskShortListFilter.API"
+          "$ref": "task.TaskShortListFilter"
       response:
         type: array
         model:
-          "$ref": "task.TaskShortModel.API"
+          "$ref": "task.TaskShortModel"
       rest: 
         type: get
     # сортировка в реквесте из коробки
     changeStatus:
       request: 
         model:
-          "$ref": "task.ChangeStatusRequest.API"
+          "$ref": "task.ChangeStatusRequest"
           # ids:[], delta: {status: "NEW"}
       response:
         type: array
         model:
-          "$ref": "task.ChangeStatusResponse.API"
+          "$ref": "task.ChangeStatusResponse"
       rest: 
         type: post

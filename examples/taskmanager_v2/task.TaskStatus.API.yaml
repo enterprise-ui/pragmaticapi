@@ -1,0 +1,10 @@
+api: 
+  title: Task Status actions title
+  description: Task Status actions description
+  actions:
+    crud:
+      methods: r
+      filter: 
+        "$ref": "task.TaskStatusFilter"
+      model:
+        "$ref": "task.TaskStatus"
