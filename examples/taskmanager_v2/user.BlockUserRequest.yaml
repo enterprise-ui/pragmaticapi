@@ -1,8 +1,8 @@
----
-"$id": "user.BlockUserRequest.API"
+"$id": "user.BlockUserRequest"
 type: object
 required:
 - id
 properties:
-  "$useField":
-    - "user.User/properties/id"
+  id:
+    "$ref": "user.User"
+    property: "id"

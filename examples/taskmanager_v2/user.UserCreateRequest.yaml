@@ -1,16 +1,12 @@
----
-"$id": "user.UserCreateRequest.API"
+"$id": "user.UserCreateRequest"
 type: object
 required:
 - username
 - name
 properties:
-  fields:
-    username:
-      "$ref": "user.User"
-      property: "username"
-    name:
-      "$ref": "user.User"
-      property: "name"
-# TODO: Сделать как в task.User.Lookup
-# TODO: Убрать API в названии - это модель
+  username:
+    "$ref": "user.User"
+    property: "username"
+  name:
+    "$ref": "user.User"
+    property: "name"

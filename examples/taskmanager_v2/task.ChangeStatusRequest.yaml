@@ -1,5 +1,4 @@
----
-"$id": "task.ChangeStatusRequest.API"
+"$id": "task.ChangeStatusRequest"
 type: object
 title: Task change status request model
 description: Task change status request model

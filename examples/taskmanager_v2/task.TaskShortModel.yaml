@@ -1,5 +1,4 @@
----
-"$id": "task.Task"
+"$id": "task.TaskShortModel"
 type: object
 title: Task model
 description: Simple task operation model
@@ -13,9 +12,18 @@ additionalProperties: true
 # q - searchstring
 fulltextsearch: true
 properties:
-  "$useField":
-    - "task.Task/properties/id"
-    - "task.Task/properties/assignee"
-    - "task.Task/properties/summary"
-    - "task.Task/properties/tags"
-    - "task.Task/properties/status"
+  id:
+    "$ref": "task.Task"
+    property: "id"
+  assignee:
+    "$ref": "task.Task"
+    property: "assignee"
+  summary:
+    "$ref": "task.Task"
+    property: "summary"
+  tags:
+    "$ref": "task.Task"
+    property: "tags"
+  status:
+    "$ref": "task.Task"
+    property: "status"

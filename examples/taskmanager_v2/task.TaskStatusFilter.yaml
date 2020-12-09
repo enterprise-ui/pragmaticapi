@@ -1,4 +1,3 @@
----
 "$id": "task.TaskStatusFilter"
 type: object
 title: Task Status filter model

@@ -1,12 +1,16 @@
----
-"$id": "user.UserFilter.API"
+"$id": "user.UserFilter"
 type: object
 required:
 - id
 - username
 - name
 properties:
-  "$useField":
-    - "user.User/properties/id"
-    - "user.User/properties/username"
-    - "user.User/properties/name"
+  id:
+    "$ref": "user.User"
+    property: "id"
+  username:
+    "$ref": "user.User"
+    property: "username"
+  name:
+    "$ref": "user.User"
+    property: "name"
