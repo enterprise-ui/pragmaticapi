@@ -1,0 +1,8 @@
+"$id": "task.TaskStatusFilter"
+type: object
+title: Task Status filter model
+description: Simple task status filter model
+required:
+- id
+- status
+fulltextsearch: true

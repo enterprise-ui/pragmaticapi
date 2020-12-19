@@ -1,0 +1,22 @@
+"$id": "task.TaskShortListFilter"
+type: object
+title: Task short list filter
+description: Task short list filter
+required:
+- id
+- assignee
+- summary
+- status
+properties:
+  id:
+    "$ref": "task.Task"
+    property: "id"
+  assignee:
+    "$ref": "task.Task"
+    property: "assignee"
+  summary:
+    "$ref": "task.Task"
+    property: "summary"
+  status:
+    "$ref": "task.Task"
+    property: "status"

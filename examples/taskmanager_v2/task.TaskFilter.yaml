@@ -1,5 +1,4 @@
----
-"$id": "task.TaskFilter.API"
+"$id": "task.TaskFilter"
 type: object
 title: Task filter model
 description: Simple task filter model
@@ -12,13 +11,24 @@ required:
 - status
 fulltextsearch: true
 properties:
-  "$useField":
-    - "task.Task/properties/id"
-    - "task.Task/properties/assignee"
-    - "task.Task/properties/summary"
-    - "task.Task/properties/content"
-    - "task.Task/properties/tags"
-    - "task.Task/properties/status"
+  id:
+    "$ref": "task.Task"
+    property: "id"
+  assignee:
+    "$ref": "task.Task"
+    property: "assignee"
+  summary:
+    "$ref": "task.Task"
+    property: "summary"
+  content:
+    "$ref": "task.Task"
+    property: "content"
+  tags:
+    "$ref": "task.Task"
+    property: "tags"
+  status:
+    "$ref": "task.Task"
+    property: "status"
   statusHistoryDateFrom:
     "$id": "#/properties/statusHistoryDateFrom"
     type: string

@@ -1,4 +1,3 @@
----
 "$id": "task.Task"
 type: object
 title: Task model
@@ -24,16 +23,23 @@ properties:
     - T-123
     filter: base
     sorting: true
+  # Поле требует резолва по справочнику.
+  # Компоненты: AssigneeLabel, AssigneeAutocomplete.
   assignee:
-    "$id": "#/properties/assignee"
+    "$id": "#/properties/assignee",
     type: string
     title: Assignee
     description: Assignee
     default: ''
     example:
     - 'username'
-    filter: base
-    sorting: true
+    control:
+      filter: base
+      "$lookup":
+        "$ref": "task.User.Lookup"
+      sorting: true
+      type: lookup
+      cache: true
   summary:
     "$id": "#/properties/summary"
     type: string
@@ -74,4 +80,10 @@ properties:
     type: string
     title: status
     description: status
-    filter: base
+    control:
+      filter: base
+      "$lookup":
+        "$ref": "task.TaskStatus.Lookup"
+      sorting: true
+      type: lookup
+      cache: true

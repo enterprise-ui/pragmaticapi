@@ -1,0 +1,29 @@
+"$id": "task.TaskShortModel"
+type: object
+title: Task model
+description: Simple task operation model
+required:
+- id
+- assignee
+- summary
+- tags
+- status
+additionalProperties: true
+# q - searchstring
+fulltextsearch: true
+properties:
+  id:
+    "$ref": "task.Task"
+    property: "id"
+  assignee:
+    "$ref": "task.Task"
+    property: "assignee"
+  summary:
+    "$ref": "task.Task"
+    property: "summary"
+  tags:
+    "$ref": "task.Task"
+    property: "tags"
+  status:
+    "$ref": "task.Task"
+    property: "status"

@@ -1,0 +1,8 @@
+"$id": "user.BlockUserRequest"
+type: object
+required:
+- id
+properties:
+  id:
+    "$ref": "user.User"
+    property: "id"

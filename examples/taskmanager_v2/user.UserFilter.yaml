@@ -1,0 +1,16 @@
+"$id": "user.UserFilter"
+type: object
+required:
+- id
+- username
+- name
+properties:
+  id:
+    "$ref": "user.User"
+    property: "id"
+  username:
+    "$ref": "user.User"
+    property: "username"
+  name:
+    "$ref": "user.User"
+    property: "name"

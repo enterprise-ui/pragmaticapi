@@ -1,0 +1,14 @@
+"$id": "task.TaskStatus.Lookup"
+type: object
+title: Task Status Lookup
+description: Task Status Lookup
+properties:
+  api:
+    "$ref": "task.TaskStatus.API"
+  fields:
+    id:
+      "$ref": "task.TaskStatus"
+      property: "id"
+    name:
+      "$ref": "task.TaskStatus"
+      property: "name"

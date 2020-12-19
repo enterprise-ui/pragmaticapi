@@ -1,0 +1,12 @@
+"$id": "user.UserCreateRequest"
+type: object
+required:
+- username
+- name
+properties:
+  username:
+    "$ref": "user.User"
+    property: "username"
+  name:
+    "$ref": "user.User"
+    property: "name"

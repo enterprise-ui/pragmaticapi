@@ -1,0 +1,20 @@
+"$id": "task.TaskCreateRequest"
+type: object
+title: Task create model
+description: Task create model
+required:
+- summary
+- content
+properties:
+  assignee:
+    "$ref": "task.Task"
+    property: "assignee"
+  summary:
+    "$ref": "task.Task"
+    property: "summary"
+  content:
+    "$ref": "task.Task"
+    property: "content"
+  tags:
+    "$ref": "task.Task"
+    property: "tags"

@@ -1,0 +1,14 @@
+"$id": "task.User.Lookup"
+type: object
+title: Task User Lookup
+description: Task User Lookup
+properties:
+  api:
+    "$ref": "user.User.API"
+  fields:
+    id:
+      "$ref": "user.User"
+      property: "id"
+    name:
+      "$ref": "user.User"
+      property: "name"

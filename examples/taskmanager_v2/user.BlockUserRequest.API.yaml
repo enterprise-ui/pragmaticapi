@@ -1,8 +1,0 @@
----
-"$id": "user.BlockUserRequest.API"
-type: object
-required:
-- id
-properties:
-  "$useField":
-    - "user.User/properties/id"

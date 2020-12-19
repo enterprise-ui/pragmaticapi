@@ -6,9 +6,9 @@ api:
     crud:
       methods: crud
       filter: 
-        "$ref": "user.UserFilter.API"
+        "$ref": "user.UserFilter"
       createRequest:
-        "$ref": "user.UserCreateRequest.API"
+        "$ref": "user.UserCreateRequest"
       model:
         "$ref": "user.User"
       # delete - зашить
@@ -16,9 +16,9 @@ api:
       request:
         type: array
         model: 
-          "$ref": "user.BlockUserRequest.API"
+          "$ref": "user.BlockUserRequest"
       response:
         model:
-          "$ref": "common.BlockUserResponse.API"
+          "$ref": "common.BlockUserResponse"
       rest:
         type: post
