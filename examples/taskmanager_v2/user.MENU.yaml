@@ -1,0 +1,7 @@
+User:
+  card:
+    info:
+      url: /user/:id/info
+      type: details
+      groupname: 1
+      $ref: "user.User"
