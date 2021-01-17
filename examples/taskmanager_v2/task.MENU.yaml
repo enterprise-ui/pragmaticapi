@@ -1,0 +1,22 @@
+Task:
+  card:
+    info:
+      url: /task/:id/info
+      type: details
+      groupname: 1
+      $ref: "task.Task"
+      label: Info
+    history:
+      url: /task/:id/history
+      type: list
+      groupname: 1
+      filter: {task_id: :id}
+      $ref: 'task.TaskStatus'
+      label: History
+TaskStatus:
+  card:
+    info:
+      url: /taskStatus/:id/info
+      type: details
+      groupname: 1
+      $ref: "task.TaskStatus"
