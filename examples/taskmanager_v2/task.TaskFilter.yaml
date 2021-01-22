@@ -31,23 +31,18 @@ properties:
     property: "status"
   statusHistoryDateFrom:
     "$id": "#/properties/statusHistoryDateFrom"
-    type: string
+    type: date
     title: Status history date from
     description: Status history date from
     example:
     - '2020-01-05T14:48:00.000Z'
   statusHistoryDateTo:
     "$id": "#/properties/statusHistoryDateTo"
-    type: string
+    type: date
     title: Status history date to
     description: Status history date to
     example:
     - '2020-01-05T14:48:00.000Z'
   statusHistoryStatus:
-    "$id": "#/properties/statusHistoryStatus"
-    type: string
-    title: status name
-    default: ''
-    example:
-    - 'TODO'
-    description: status name
+    "$ref": "task.Task"
+    property: "status"
