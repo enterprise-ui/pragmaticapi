@@ -1,0 +1,8 @@
+api: 
+  title: Task Tag actions title
+  description: Task Tag actions description
+  actions:
+    crud:
+      methods: r
+      model:
+        "$ref": "task.TaskTag"

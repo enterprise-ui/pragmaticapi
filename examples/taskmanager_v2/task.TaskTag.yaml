@@ -1,0 +1,24 @@
+"$id": "task.TaskStatus"
+type: object
+required:
+- id
+- name
+additionalProperties: true
+excludeFromRestPath: true
+properties:
+  id:
+    "$id": "#/properties/id"
+    type: string
+    title: The task tag id
+    description: An explanation about the purpose of this instance.
+    default: ''
+    example:
+    - '123'
+  name:
+    "$id": "#/properties/name"
+    type: string
+    title: tag name
+    default: ''
+    example:
+    - 'nice'
+    description: tag name

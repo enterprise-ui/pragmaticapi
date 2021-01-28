@@ -74,7 +74,13 @@ properties:
       enum:
       - b2b
       - b2c
-    filter: base
+    control:
+      filter: base
+      "$lookup":
+        "$ref": "task.TaskTag.Lookup"
+      sorting: true
+      type: lookup
+      cache: true
   status:
     "$id": "#/properties/status"
     type: string
