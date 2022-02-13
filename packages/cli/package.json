@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/jest": "^25.2.1",
-    "ajv": "^6.12.2",
+    "ajv": "^6.12.3",
     "typescript-json-schema": "^0.42.0",
     "@types/js-yaml": "latest",
     "@types/node": "^13.11.1",
